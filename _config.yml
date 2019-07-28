@@ -4,9 +4,9 @@
 # 基本信息
 name: 轩轩
 description: 这是一个整理记录的博客
-avatar: /images/avatar.jpg
+avatar: https://github.com/dyx2019/dyx2019.github.io/tree/master/images/avatar.jpg
 # favicon（出现在浏览器tab上）图片URL
-favicon: /images/avatar.jpg
+favicon: https://github.com/dyx2019/dyx2019.github.io/tree/master/images/avatar.jpg
 
 
 # 菜单中的按钮
