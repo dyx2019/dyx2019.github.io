@@ -18,7 +18,7 @@ navigation:
   - name: 文章
     url: /tags
   - name: 关于
-  url: /about
+    url: /about
 
 # 每页的文章数
 paginate: 8
