@@ -30,10 +30,12 @@ layout: default
       </div>
 
       <div class="entry">
-        {{ post.excerpt | truncate: 200 }}
+        {post.introduction}
       </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      <div class="read-more">
+          <a href="{{ site.baseurl }}{{ post.url }}">查看全文</a>
+      </div>
     </article>
   {% endfor %}
 </div>
