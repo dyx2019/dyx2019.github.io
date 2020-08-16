@@ -17,7 +17,9 @@ coments: true
 ### 解决方案
 
 H5的开发过程中，是利用vue进行开发的，因此之后的内容以vue为例。
+
 ***
+
 解决方案如下：
 ```
   mounted() {
@@ -48,7 +50,7 @@ H5的开发过程中，是利用vue进行开发的，因此之后的内容以vue
 * state: history堆栈中最上层的状态值
 * back、go等方法则位于__proto__中
 
-![img](https://raw.githubusercontent.com/dyx2019/dyx2019.github.io/master/images/history.png)
+![img](https://raw.githubusercontent.com/dyx2019/dyx2019.github.io/master/images/pushstatehistory.png)
 
 > history.pushState(state, title[, url])
 
@@ -79,7 +81,8 @@ window.addEventListener('popstate', this.preventBack, false);
 ```
 
 popstate事件在浏览器的历史记录发生改变时会被触发，但history.pushState并不会触发该事件，通常在点击返回按钮或显示调用history.back()、history.go(-1)事件时触发。
-***  
+***
+
 **vue中，在未添加pushState时，点击返回事件时会立即执行销毁当前页面的操作，即会触发destroyed生命周期函数，将popstate事件的监听事件移除，因而并不能拦截到app的返回行为，这也是为什么需要pushState添加一条历史记录。popstate事件的触发需要完整的执行完history.back()事件时才会触发**
 
 例如在跳转到http://geogle/about页面时，执行如下代码，则url会更改为http://geogle/home，页面不会进行刷新。
